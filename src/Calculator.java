@@ -8,11 +8,11 @@ public class Calculator {
     }
 
     public static void calc() {
-        System.out.print("Введите первое число: ");
-        int first = checkNum("первое");
-        System.out.print("Введите второе число: ");
-        int second = checkNum("второе");
-        System.out.print("Выберете действие (+) (-) (*) (/): ");
+        System.out.print("Enter the first number: ");
+        int first = checkNum("first");
+        System.out.print("Enter the second number ");
+        int second = checkNum("second");
+        System.out.print("Chosen action (+) (-) (*) (/): ");
         String action = checkAction();
         switch (action) {
             case "+" -> plus(first, second);
@@ -27,8 +27,8 @@ public class Calculator {
         while (check == null) {
             check = scanner.nextLine();
             if (!check.matches("\\d+")) {
-                System.out.println("Неверный ввод");
-                System.out.print("Введите " + firstOrSecond +" число: ");
+                System.out.println("Invalid input");
+                System.out.print("Enter the " + firstOrSecond +" number: ");
                 check = null;
             }
         }
@@ -40,8 +40,8 @@ public class Calculator {
         while (action == null) {
             action = scanner.nextLine();
             if (!action.matches("[+\\-*/]")) {
-                System.out.println("Неизвестое действие");
-                System.out.print("Выберете действие (+) (-) (*) (/): ");
+                System.out.println("Invalid action");
+                System.out.print("Chosen action (+) (-) (*) (/): ");
                 action = null;
             }
         }
