@@ -1,14 +1,18 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        System.out.println("Qwert");
-        int a = 0b1101010110;
-        int b = 012314;
-        int c = 456;
-        int d = 0x141D12;
-        System.out.println("Число a в двоичной системе: " + a);
-        System.out.println("Число b в восьмеричной системе: " + b);
-        System.out.println("Число c в десятичной системе: " + c);
-        System.out.println("Число d в шеснадцатиричной системе: " + d);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        sum(scanner.nextInt());
+    }
+
+    public static void sum(int first) {
+        switch (first) {
+            case 1 -> System.out.println("Это еденица");
+            case 2 -> System.out.println("Это двойка");
+            case 3 -> System.out.println("Это тройка");
+            default -> System.out.println("Я не знаю это число");
+        }
     }
 }
